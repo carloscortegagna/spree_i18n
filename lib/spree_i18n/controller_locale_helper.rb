@@ -17,6 +17,21 @@ module SpreeI18n
           locale ||= Rails.application.config.i18n.default_locale || I18n.default_locale
 
           I18n.locale = locale
+
+          if Spree::Config[:allow_currency_change]
+            localized_currency = LOCALES_CURRENCIES_ASSOCIATIONS[I18n.locale] if defined?(LOCALES_CURRENCIES_ASSOCIATIONS)
+
+            if localized_currency.present?
+              currency = supported_currencies.find { |currency| currency.iso_code.eql?(localized_currency) }
+
+              # make sure that we update the current order, so the currency change is reflected
+              if defined?(current_order) && current_order.present?
+                current_order.update_attributes!(currency: currency.iso_code)
+              end
+
+              session[:currency] = localized_currency
+            end
+          end
         end
 
         def globalize_fallbacks
