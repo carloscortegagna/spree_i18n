@@ -35,7 +35,7 @@ es-MX:
       spree/order:
         checkout_complete: Flujo de Compra Completado
         completed_at: Completado el
-        coupon_code: Cupon
+        coupon_code: Cupón
         created_at: Fecha de pedido
         email: E-Mail del cliente
         ip_address: Dirección IP
@@ -86,7 +86,7 @@ es-MX:
         path: Ruta
         starts_at: Comienza
         usage_limit: Límite de Uso
-      spree/property:
+      spree/property: 
         name: Nombre
         presentation: Presentación
       spree/prototype:
@@ -119,7 +119,7 @@ es-MX:
         cost_currency: Moneda de Costo
         cost_price: Precio de Costo
         depth: Profundidad
-        height: Alto
+        height: Altura
         price: Precio
         sku: SKU
         weight: Peso
@@ -416,11 +416,6 @@ es-MX:
     country: País
     country_based: País base
     country_name: Nombre
-    country_names:
-      CA: Canadá
-      FRA: Francia
-      ITA: Italia
-      US: Estados Unidos de América
     coupon: Cupón
     coupon_code: Código de cupón
     coupon_code_already_applied: El código del cupón ya ha sido aplicado en esta orden

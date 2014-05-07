@@ -416,11 +416,6 @@ en-GB:
     country: Country
     country_based: Country Based
     country_name: Name
-    country_names:
-      CA: Canada
-      FRA: France
-      ITA: Italy
-      US: United States of America
     coupon: Coupon
     coupon_code: Coupon code
     coupon_code_already_applied: The coupon code has already been applied to this order
@@ -1064,7 +1059,7 @@ en-GB:
     users: Users
     validation:
       cannot_be_less_than_shipped_units: cannot be less than the number of shipped units.
-      cannot_destory_line_item_as_inventory_units_have_shipped: Cannot destory line item as some inventory units have shipped.
+      cannot_destory_line_item_as_inventory_units_have_shipped: Cannot destroy line item as some inventory units have shipped.
       exceeds_available_stock: exceeds available stock. Please ensure line items have a valid quantity.
       is_too_large: is too large -- stock on hand cannot cover requested quantity!
       must_be_int: must be an integer

@@ -40,7 +40,7 @@ da:
         email: E-mail-adresse
         ip_address: IP-adresse
         item_total: Varetotal
-        number: Antal
+        number: Ordrenummer
         payment_state: Betalingsstatus
         shipment_state: Leveringsstatus
         special_instructions: Særlige forhold
@@ -416,11 +416,6 @@ da:
     country: Land
     country_based: Landbaseret
     country_name: Navn
-    country_names:
-      CA: Canada
-      FRA: Frankrig
-      ITA: Italien
-      US: USA
     coupon: Rabat
     coupon_code: Rabatkode
     coupon_code_already_applied: Rabatkoden er allerede anvendt på denne ordre
