@@ -26,7 +26,7 @@ module SpreeI18n
 
               # make sure that we update the current order, so the currency change is reflected
               if defined?(current_order) && current_order.present?
-                current_order.update_attributes!(currency: currency.iso_code)
+                current_order.update_attribute(:currency, currency.iso_code)
               end
 
               session[:currency] = localized_currency
