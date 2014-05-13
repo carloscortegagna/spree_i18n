@@ -22,14 +22,14 @@ module SpreeI18n
             localized_currency = LOCALES_CURRENCIES_ASSOCIATIONS[I18n.locale] if defined?(LOCALES_CURRENCIES_ASSOCIATIONS)
 
             if localized_currency.present?
-              currency = supported_currencies.find { |currency| currency.iso_code.eql?(localized_currency) }
+              currency = (supported_currencies.find { |currency| currency.iso_code.eql?(localized_currency) } rescue nil)
 
               # make sure that we update the current order, so the currency change is reflected
-              if defined?(current_order) && current_order.present?
+              if currency.present? && defined?(current_order) && current_order.present?
                 current_order.update_attribute(:currency, currency.iso_code)
               end
 
-              session[:currency] = localized_currency
+              session[:currency] = currency.iso_code if currency.present?
             end
           end
         end
